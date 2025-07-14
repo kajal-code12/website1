@@ -1,0 +1,210 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  
+
+   position: relative;       /* allows dropdowns to overlay slideshow */
+  z-index: 999;             /* topmost */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;             /* Exicon uses a taller navbar */
+  padding: 0 40px;
+  background: #fff;         /* white background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+
+
+
+.logo {
+  color: rgb(241, 234, 234);
+  font-size: 20px;
+  font-weight: bold;
+  
+  
+}
+.navbar img {
+  width: 200px;
+  height: 80px;
+  border-radius: 10%;
+  margin-right: 10px;
+
+
+ 
+
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+  color: #8d1358;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(17, 16, 16);
+  padding: 8px;
+  transition: background 0.3s;
+
+
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-content {
+  
+
+  display: none;
+  position: absolute;
+  top: 100%;                /* right below navbar */
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid #555;
+  color: #111010;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: #111010;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Slideshow */
+.slideshow-container {
+  
+
+  position: relative;
+  z-index: 1;               /* drop behind navbar */
+  width: 100%;
+  height: calc(100vh - 80px);  /* full viewport height minus navbar */
+  overflow: hidden;
+}
+}
+
+.slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(70%);
+
+}
+
+
+.caption {
+ 
+
+   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  padding: 16px 24px;
+  border-radius: 4px;
+}
+
+.text1 {
+  font-size: 2rem;
+  font-weight: italic;
+  color: #fff;
+  text-align: center;
+}
+
+.text2 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+
+}
+
+.text3 {
+  font-size: 3rem;
+  font-weight: italic;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+
+/* Dots */
+.dots {
+ 
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+
+
+.dot {
+  
+  display: inline-block;
+  margin: 0 6px;
+  width: 14px;
+  height: 14px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fade Animation */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: .4}
+  to {opacity: 1}
+}
