@@ -22,7 +22,7 @@ body {
   padding: 0 50px;
   background: #fff;         /* white background */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  
+  margin-right: 200px; 
 }
 
 
@@ -111,7 +111,7 @@ body {
   height: calc(100vh - 80px);  /* full viewport height minus navbar */
   overflow: hidden;
 }
-}
+
 
 .slide {
   display: none;
@@ -410,7 +410,7 @@ h3 {
 }
 
 .audience-card {
-    background: white;
+    background: rgb(212, 49, 196);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -427,13 +427,13 @@ h3 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #470440, #764ba2);
+    background: linear-gradient(90deg, #f4f3f4, #f7f7f9);
 }
 
 .audience-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-color: #164f75;
+    border-color: #0e0e0e;
 }
 
 .audience-card h3 {
@@ -444,8 +444,8 @@ h3 {
 }
 
 .audience-card p {
-    color: #666;
-    font-size: 1rem;
+    color: #090909;
+    font-size: 1.2rem;
     line-height: 1.6;
 }
 

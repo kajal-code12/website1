@@ -1,0 +1,200 @@
+.side-nav {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px 0 0 15px;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.nav-kajals {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-kajal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.image {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.nav-kajal:hover {
+    transform: translateX(-5px);
+    box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-kajal i {
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Individual Social Media Colors */
+.facebook:hover {
+    background: #3b5998;
+    color: white;
+    .image {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+.twitter:hover {
+    background: #1da1f2;
+    color: white;
+    .image {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+.linkedin:hover {
+    background: #0077b5;
+    color: white;
+    .image {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    .image {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+
+
+.whatsapp:hover {
+    background: #25d366;
+    color: white;
+    .image {
+        width: 5px;
+        height: 5px;
+    }
+    
+}
+
+/* Tooltip on hover */
+.nav-kajal::before {
+    content: attr(title);
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.nav-kajal::after {
+    content: '';
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid rgba(0, 0, 0, 0.8);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.nav-kajal:hover::before,
+.nav-kajal:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .side-nav {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        border-radius: 15px 15px 0 0;
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .nav-kajals {
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .main-content {
+        margin-right: 0;
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+
+    .nav-kajal::before {
+        bottom: 60px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .nav-kajal::after {
+        bottom: 55px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%) rotate(90deg);
+    }
+}
+
+/* Animation for smooth entrance */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.side-nav {
+    animation: slideIn 0.5s ease-out;
+}

@@ -3,11 +3,6 @@
     position: relative;
 }
 
-.dropdown-toggle::after {
-    content: ' ▼';
-    font-size: 10px;
-    margin-left: 5px;
-}
 
 .dropdown-menu {
     position: absolute;
@@ -49,7 +44,7 @@
 }
 
 .column-title {
-    color: #99228b;
+    color: #1c1c1c;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -70,7 +65,7 @@
 
 .service-list a {
     text-decoration: none;
-    color: #666;
+    color: #211f21;
     font-size: 14px;
     line-height: 1.4;
     transition: color 0.3s ease, padding-left 0.3s ease;
@@ -79,7 +74,7 @@
 }
 
 .service-list a:hover {
-    color: #99227f;
+    color: #ece8eb;
     padding-left: 10px;
 }
 
